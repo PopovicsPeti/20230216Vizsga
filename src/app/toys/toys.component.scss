@@ -1,0 +1,52 @@
+$quote-backgound: #eeeeee;
+$quote-text: hsl(0, 88%, 27%);
+
+$list-text: darkgreen;
+
+.cont{
+    margin: 5vh 5vw;
+
+    .sect-1{
+        display: block;
+        margin-bottom: 5rem;
+
+        .img{
+            display: block;
+            width: 25vW;
+            margin-right: 0;
+            margin-left: auto;
+
+            img{
+                width: 100%;
+            }
+        }
+
+        .q{
+            display: block;
+            width: 60vw;
+            float: left;
+
+            blockquote{
+                padding: 1rem ;
+                border-radius: 10px;
+                font-size: 2em;
+                background-color: $quote-backgound;
+                color: $quote-text;
+            }
+        }
+    }
+
+    .sect-2{
+        margin-top: 2rem;
+        display: block;
+        width: 100%;
+        margin-bottom: 10vh;
+    }
+
+    ul{
+        color: $list-text;
+    }
+
+    
+}
+

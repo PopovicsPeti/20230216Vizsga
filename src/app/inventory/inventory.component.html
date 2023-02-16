@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row" *ngIf="loading">
+        <div class="col-12 text-center my-3">
+            <img src="../../assets/feladat6-loading.gif" alt="loading">
+        </div>
+    </div>
+    <div class="row" *ngIf="!loading">
+        <div class="col-12">
+            <h2 class="display-2 text-center my-3"><b>Inventory</b></h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="alert alert-danger alert-dismissible fade show" role="alert" *ngIf="errorMessage">
+                <strong>Something went wrong! -> </strong> {{ errorMessage }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" (click)="errorMessage = ''"></button>
+              </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Creator</th>
+                        <th>Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let row of plushieArray">
+                        <td *ngFor="let cell of header">{{ row[cell] }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
